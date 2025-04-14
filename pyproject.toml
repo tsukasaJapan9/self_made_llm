@@ -1,0 +1,24 @@
+[project]
+name = "self-made-llm"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel>=6.29.5",
+    "ruff>=0.11.5",
+    "tiktoken>=0.9.0",
+    "torch==2.6.0+cu126",
+    "torchvision==0.21.0+cu126",
+]
+
+[tool.ruff]
+extend-include = ["*.ipynb"]
+indent-width = 2
+line-length = 120
+
+[tool.uv]
+find-links = [
+  "https://download.pytorch.org/whl/cu126/torch",
+  "https://download.pytorch.org/whl/cu126/torchvision",
+]
